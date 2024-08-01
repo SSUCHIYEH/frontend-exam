@@ -1,3 +1,7 @@
+# Frontend Exam
+
+[instructions](https://rootdomain.notion.site/Candidate-Exam-Front-End-Engineer-ac3dd8a3474542899d49efb894672246)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
