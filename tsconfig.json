@@ -8,8 +8,5 @@
       "path": "./tsconfig.node.json"
     }
   ],
-  "include": [
-    ".eslintrc.cjs",
-    "plugin:prettier/recommended"
-  ]
+  "include": [".eslintrc.cjs", "plugin:prettier/recommended"]
 }
