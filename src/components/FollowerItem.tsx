@@ -27,7 +27,7 @@ function FollowerItem(props: Props) {
         <div>
           <button
             className={
-              'border border-white rounded-full bg-black text-xs font-semibold leading-3 ' +
+              'border border-white rounded-full py-2 px-2.5 bg-black hover:bg-white text-xs hover:text-black font-semibold leading-3 ' +
               (props.follower.isFollowing ? 'hidden' : '')
             }
           >
@@ -35,7 +35,7 @@ function FollowerItem(props: Props) {
           </button>
           <button
             className={
-              'rounded-full bg-white text-black text-xs font-semibold leading-3 ' +
+              'rounded-full hover:border hover:border-white py-2 px-2.5 bg-white hover:bg-black text-black hover:text-white text-xs font-semibold leading-3 ' +
               (props.follower.isFollowing ? '' : 'hidden')
             }
           >

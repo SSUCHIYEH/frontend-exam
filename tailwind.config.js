@@ -58,7 +58,10 @@ export default {
             fontWeight: '400',
           },
         ], // 12px, 18px, 0.4px, 400
-        'headline-3-bold': ['3rem', { lineHeight: '7.5rem', fontWeight: 700 }], // 48px, 72px, 700
+        'headline-3-bold': [
+          '3rem',
+          { lineHeight: '3.125rem', fontWeight: 700 },
+        ], // 48px, 50px, 700
         'headline-4-regular': [
           '1.875rem',
           {
