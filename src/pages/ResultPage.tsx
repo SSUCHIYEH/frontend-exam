@@ -41,7 +41,7 @@ function Result() {
   const [totalPage, setTotalPage] = useState<number>(1);
 
   const skelectonComponents = [];
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < Number(pageSize); i++) {
     skelectonComponents.push(<SkeletonComponent key={`skelecton-${i}`} />);
   }
 
@@ -58,14 +58,12 @@ function Result() {
     } else {
       setResults((preResults) => [...preResults, ...data.data]);
     }
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
+    setLoading(false);
   };
 
   return (
     <>
-      <div className=" flex-1 px-5 lg:px-32.5 mt-[5.75rem] mb-[3.625rem]">
+      <div className=" flex-1 px-5 lg:px-32.5 mt-5 lg:mt-[5.75rem] mb-[3.625rem]">
         <div className="relative">
           <Link to="/" className="absolute top-2.5 -left-11 size-6.5">
             <img src={Back} className="size-full object-contain" />
@@ -75,26 +73,20 @@ function Result() {
           </h1>
         </div>
 
-        {loading ? (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-9 gap-y-10 lg:gap-y-7.5 mt-6">
-            {skelectonComponents}
-          </div>
-        ) : (
-          <>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-9 gap-y-10 lg:gap-y-7.5 mt-6">
-              {results.map((item) => (
-                <ResultItem item={item} key={item.id} />
-              ))}
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-9 gap-y-10 lg:gap-y-7.5 mt-6">
+          {results.map((item) => (
+            <ResultItem item={item} key={item.id} />
+          ))}
 
-            <button
-              onClick={() => setPage(Number(page) + 1)}
-              className={`${results.length > 0 && totalPage != Number(page) ? '' : 'hidden'}  rounded-sm hover:border hover:border-white w-full lg:w-85.75 mt-10 py-3.25 px-4 bg-white hover:bg-black text-black hover:text-white text-sm leading-4 font-bold`}
-            >
-              More
-            </button>
-          </>
-        )}
+          {loading ? skelectonComponents : <></>}
+        </div>
+
+        <button
+          onClick={() => setPage(Number(page) + 1)}
+          className={`${!loading && results.length > 0 && totalPage != Number(page) ? '' : 'hidden'}  rounded-sm hover:border hover:border-white w-full lg:w-85.75 mt-10 py-3.25 px-4 bg-white hover:bg-black text-black hover:text-white text-sm leading-4 font-bold`}
+        >
+          More
+        </button>
       </div>
       <Follow />
     </>

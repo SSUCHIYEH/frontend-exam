@@ -9,12 +9,14 @@ export default {
       spacing: {
         0.75: '0.188rem', // 3px
         3.25: '0.813rem', // 13px
+        4.25: '1.063rem', // 17 px
         4.5: '1.125rem', // 18px
         6.5: '1.625rem', //26px
         7.5: '1.875rem', // 30px
         9.25: '2.313rem', // 37px
         13.25: '3.313rem', // 53px
         13.5: '3.375rem', // 54px
+        17.5: '4.375rem', // 70px
         21.75: '5.438rem', // 87px
         22: '5.5rem', // 88px
         32.5: '8.125rem', // 130px
@@ -42,7 +44,7 @@ export default {
             fontWeight: '400',
           },
         ], // 16px, 24px, 0.15px, 400
-        'subtitle-blod': [
+        'subtitle-bold': [
           '1rem',
           {
             lineHeight: '1.5rem',

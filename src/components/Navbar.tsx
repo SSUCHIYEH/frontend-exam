@@ -21,10 +21,10 @@ function Navbar() {
     <>
       {location.pathname == '/' ? (
         <>
-          <div className="block lg:hidden py-7 px-5">
-            <img src={Logo} className="mb-[0.188rem]" />
+          <div className="block lg:hidden h-17.5 py-7 px-5">
+            <img src={Logo} />
           </div>
-          <div className="fixed bottom-0 flex lg:hidden justify-center gap-x-[3.125rem] w-full py-5">
+          <div className="fixed bottom-0 flex lg:hidden justify-center gap-x-[3.125rem] w-full py-[1.313rem]">
             {sidebar.map((item) => (
               <NavLink to={item.route} key={item.title}>
                 <img
@@ -40,7 +40,7 @@ function Navbar() {
           </div>
         </>
       ) : (
-        <div className="block lg:hidden py-7 px-5">
+        <div className="block lg:hidden py-4.25 px-5">
           <div className="flex items-center gap-x-[0.823rem]">
             <Link to="/">
               <img src={Back} className="size-6.5 object-contain" />
@@ -52,7 +52,7 @@ function Navbar() {
         </div>
       )}
 
-      <div className="hidden lg:flex flex-col items-center gap-y-10 w-22 h-screen pt-9.25 bg-sidebar-dark">
+      <div className="hidden lg:flex flex-col items-center gap-y-10 w-20 h-screen pt-9.25 bg-sidebar-dark">
         <img src={Logo} className="mb-[0.188rem]" />
         {sidebar.map((item) => (
           <NavLink
@@ -69,7 +69,7 @@ function Navbar() {
               className={`${item.active ? 'hidden' : ''}`}
             />
             <p
-              className={`absolute -bottom-6 text-caption-regular text-white  ${item.active ? '' : 'hidden'}`}
+              className={`absolute -bottom-4 text-caption-regular text-white  ${item.active ? '' : 'hidden'}`}
             >
               {item.title}
             </p>

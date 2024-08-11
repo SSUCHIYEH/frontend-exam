@@ -20,7 +20,7 @@
   --mobile-16px-unit: 4.26666667vw;
   --desktop-16px-unit: 1111111111vw;
   font-size: var(--mobile-16px-unit);
-  @apply font-ubuntu;
+  @apply !font-ubuntu;
 }
 
 #root {
@@ -66,4 +66,5 @@ body {
 .MuiSlider-markLabel {
   padding-top: 0.5rem !important;
   font-size: 1rem !important;
+  font-family: 'Ubuntu', 'sans-serif' !important;
 }

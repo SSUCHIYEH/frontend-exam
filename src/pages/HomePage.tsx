@@ -23,7 +23,7 @@ function Home() {
   }, [pageSize]);
 
   const navigateSearch = () => {
-    navigate(`/search?keyword=${keyword}&per=${pageSize}&page=1`);
+    navigate(`/search?keyword=${keyword}&pageSize=${pageSize}&page=1`);
   };
   return (
     <>
@@ -32,16 +32,16 @@ function Home() {
           <div>
             <h1 className="text-headline-5-regular !text-white">Search</h1>
             <input
-              className="rounded-md border-[3px] border-white/50 focus:outline-[#FF9B33] w-full mt-5 py-5 px-4.5 bg-greyscale-dark text-body-2-regular"
+              className="rounded-md border-[3px] border-white/50 focus:outline-[#FF9B33] w-full mt-4 lg:mt-5 py-4.25 px-[0.938rem] bg-greyscale-dark text-body-2-regular"
               placeholder="keyword"
               onChange={(e) => setKeyword(e.target.value)}
             />
           </div>
-          <div className="border-b border-white/10 mt-7.5 py-7.5">
-            <p className="text-headline-5-regular"># of results per page</p>
-            <div className="my-5">
-              <span className="text-headline-3-bold">{pageSize}</span>
-              <span className="ml-2.5 text-subtitle-regular">results</span>
+          <div className="lg:border-t lg:border-b border-white/10 mt-7 lg:mt-7.5 py-0 lg:py-7.5">
+            <p className="text-headline-5-regular"># Of Results Per Page</p>
+            <div className="flex items-end mt-5 mb-4.5">
+              <p className="text-headline-3-bold">{pageSize}</p>
+              <p className="ml-2.5 mb-1 text-subtitle-regular">results</p>
             </div>
             <Slider
               min={1}
