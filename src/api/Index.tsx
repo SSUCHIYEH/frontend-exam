@@ -2,9 +2,11 @@ import axios from 'axios';
 
 const BASE_URL = 'https://avl-frontend-exam.herokuapp.com/api';
 
-export const getFollowers = async () => {
+export const getFollowers = async (page: number) => {
   try {
-    const resp = await axios.get(BASE_URL + '/users/all?page=1&pageSize=10');
+    const resp = await axios.get(
+      BASE_URL + `/users/all?page=${page}&pageSize=15`
+    );
     if (resp.status === 200) return resp.data;
   } catch (err) {
     console.log(err);
@@ -12,10 +14,10 @@ export const getFollowers = async () => {
   }
 };
 
-export const getFollowing = async () => {
+export const getFollowing = async (page: number) => {
   try {
     const resp = await axios.get(
-      BASE_URL + '/users/friends?page=1&pageSize=10'
+      BASE_URL + `/users/friends?page=${page}&pageSize=15`
     );
     if (resp.status === 200) return resp.data;
   } catch (err) {
@@ -26,7 +28,7 @@ export const getFollowing = async () => {
 
 export const getTags = async () => {
   try {
-    const resp = await axios.get(BASE_URL + '/tags');
+    const resp = await axios.get(BASE_URL + '/tags?page=1&pageSize=15');
     if (resp.status === 200) return resp.data;
   } catch (err) {
     console.log(err);

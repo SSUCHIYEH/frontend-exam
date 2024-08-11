@@ -12,7 +12,7 @@ function TagItem(props: Props) {
           {props.tag.name}
         </div>
       </div>
-      <p className="mt-2.5 text-body-3-regular">{props.tag.name}</p>
+      <p className="mt-2.5 text-body-3-regular truncate">{props.tag.name}</p>
       <p className="text-body-5-regular text-greyscale-400">
         {props.tag.count} Results
       </p>

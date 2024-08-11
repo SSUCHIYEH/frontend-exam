@@ -20,7 +20,7 @@
   --mobile-16px-unit: 4.26666667vw;
   --desktop-16px-unit: 1111111111vw;
   font-size: var(--mobile-16px-unit);
-  @apply font-ubuntu;
+  @apply !font-ubuntu;
 }
 
 #root {
@@ -33,15 +33,6 @@
   }
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -50,55 +41,30 @@ body {
   min-height: 100vh;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.MuiSlider-track {
+  background: linear-gradient(to right, #ff5c01, #ffd25f);
+  border: none !important;
+  height: 8px !important;
 }
 
-input[type='range'] {
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
-  outline: 0;
-  height: 12px;
-  border-radius: 40px;
-  /* background: linear-gradient(
-    to right,
-    #ff9800 0%,
-    #ff9800 50%,
-    #fff 50%,
-    #fff 100%
-  ); */
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+.MuiSlider-rail {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  height: 8px !important;
 }
 
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  background-image: radial-gradient(circle, #f7f7fc 40%, #ff9800 45%);
-  border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+.MuiSlider-thumb {
+  height: 17px !important;
+  width: 17px !important;
+  background-color: #1b1b1b !important;
+  outline: 6px solid #ffd25f !important;
 }
 
-/*input[type='range']::-moz-range-thumb {
-  width: 24px;
-  height: 24px;
-  -moz-appearance: none;
-  background-image: radial-gradient(circle, #f7f7fc 40%, #ff9800 45%);
-  border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
-} */
+.MuiSlider-mark {
+  opacity: 0 !important;
+}
+
+.MuiSlider-markLabel {
+  padding-top: 0.5rem !important;
+  font-size: 1rem !important;
+  font-family: 'Ubuntu', 'sans-serif' !important;
+}
